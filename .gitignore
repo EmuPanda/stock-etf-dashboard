@@ -1,9 +1,9 @@
-# Environment variables and secrets
-.env
-.env.local
-.env.*.local
-.env.production
-.env.staging
+# Environment variables and secrets (if needed in future)
+# .env
+# .env.local
+# .env.*.local
+# .env.production
+# .env.staging
 
 # Python
 __pycache__/

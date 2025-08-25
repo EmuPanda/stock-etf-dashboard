@@ -4,19 +4,13 @@ import numpy as np
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime, timedelta
 import time
-from supabase import create_client, Client
 from config import Config
-import asyncio
 from functools import lru_cache
 
 class StockDataService:
     """Backend service for stock data operations - handles heavy processing"""
     
     def __init__(self):
-        self.supabase: Client = create_client(
-            Config.get_supabase_url(),
-            Config.get_supabase_key()
-        )
         self.cache = {}
         self.cache_timestamps = {}
         self.rate_limit_tracker = {}
