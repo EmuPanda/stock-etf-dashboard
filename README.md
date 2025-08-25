@@ -63,7 +63,11 @@ app/
 
 ## Screenshots
 
-*Add screenshots of your dashboard here*
+<img width="1468" height="836" alt="Screenshot 2025-08-25 at 1 12 20 AM" src="https://github.com/user-attachments/assets/ccdb9ad9-5565-4b92-ac98-cf87a377cee9" />
+
+<img width="1465" height="833" alt="Screenshot 2025-08-25 at 1 16 21 AM" src="https://github.com/user-attachments/assets/1055fa63-620c-493a-b126-9c5c5af116eb" />
+
+
 
 ## Contributing
 
