@@ -12,6 +12,20 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+# Hide the Streamlit sidebar completely
+st.markdown("""
+<style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stDeployButton {display: none;}
+    .stApp > header {display: none;}
+    .stApp > footer {display: none;}
+    .stApp > div[data-testid="stToolbar"] {display: none;}
+    .stApp > div[data-testid="stDecoration"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+
 def main():
     # Header with better icon
     st.markdown('<h1 class="main-header">📈 Stock/ETF Dashboard</h1>', unsafe_allow_html=True)
