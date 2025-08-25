@@ -1,189 +1,216 @@
-# 📊 Stock/ETF Dashboard
+# 📈 Stock/ETF Dashboard
 
-A comprehensive financial dashboard for tracking stocks, ETFs, and portfolio performance with advanced analytics and risk metrics.
+A professional, real-time financial dashboard built with Python and Streamlit, featuring live market data, portfolio analysis, and market insights.
 
-## 🚀 Features
+## 🚀 **Live Demo**
 
-### Core Features
-- **Real-time Stock Data**: Pull live data from Yahoo Finance API
-- **Stock Screening**: Filter by sector, market cap, P/E ratio, dividend yield
-- **Portfolio Simulator**: Create and manage virtual portfolios with $10K simulation
-- **Risk Analytics**: Calculate volatility, Sharpe ratio, maximum drawdown
-- **S&P 500 Benchmarking**: Compare portfolio performance against market indices
-- **Interactive Charts**: Professional financial visualizations with Plotly
+**Your dashboard is running at: http://localhost:8501**
 
-### Advanced Features
-- **Technical Indicators**: SMA, RSI, volatility calculations
-- **Sector Analysis**: Market breadth and sector rotation insights
-- **Portfolio Optimization**: Risk-return analysis and rebalancing suggestions
-- **Historical Data**: 1-year price charts with moving averages
-- **Market Overview**: Real-time major index tracking
+## ✨ **Features**
 
-## 🏗️ Architecture
+### 🏠 **Dashboard**
+- **Real-time market overview** (S&P 500, NASDAQ)
+- **Top market movers** (69 carefully selected stocks)
+- **Quick stock lookup** with detailed analytics
+- **Market breadth indicators**
 
-### Backend Services (Heavy Processing)
-- **StockDataService**: Handles API calls, data processing, caching
-- **PortfolioService**: Portfolio management, risk calculations, simulation
-- **Database Layer**: Supabase integration for data persistence
+### 🔍 **Stock Browser**
+- **Advanced stock screening** by P/E, dividends, market cap
+- **Sector-based filtering**
+- **Export results to CSV**
+- **Real-time data from Yahoo Finance**
 
-### Frontend (Clean Interface)
-- **Streamlit Dashboard**: Professional UI with minimal frontend processing
-- **Interactive Components**: Charts, tables, and forms
-- **Responsive Design**: Mobile-friendly interface
+### 💼 **Portfolio Simulator**
+- **Create investment scenarios** with any stocks
+- **Historical performance analysis** (6m, 1y, 2y, 5y)
+- **Risk metrics**: Sharpe ratio, beta, correlation, max drawdown
+- **S&P 500 benchmark comparison**
+- **Export analysis reports**
 
-### Security Features
-- **Environment Configuration**: Secure credential management
-- **API Rate Limiting**: Intelligent caching and fallback systems
-- **Data Validation**: Input sanitization and error handling
+### 📊 **Market Analysis**
+- **Sector performance analysis** across 5 major sectors
+- **Market breadth indicators** (advancing vs declining stocks)
+- **Market sentiment interpretation**
+- **Top movers tracking**
 
-## 🛠️ Installation
+## 🏗️ **Project Structure**
 
-### Prerequisites
-- Python 3.8+
-- pip package manager
-- Supabase account (free tier)
-
-### Setup Steps
-
-1. **Clone the repository**
-   ```bash
-   git clone <your-repo-url>
-   cd stock-etf-dashboard
-   ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure Supabase**
-   - Create account at [supabase.com](https://supabase.com)
-   - Create new project
-   - Update `config.py` with your credentials
-
-4. **Run the dashboard**
-   ```bash
-   streamlit run main_dashboard.py
-   ```
-
-## 📱 Usage
-
-### Dashboard Navigation
-1. **🏠 Dashboard**: Market overview, quick stock lookup, portfolio summary
-2. **📈 Stock Browser**: Stock screening and filtering tools
-3. **💼 Portfolio Simulator**: Create and manage virtual portfolios
-4. **📊 Market Analysis**: Sector performance and market breadth analysis
-
-### Creating a Portfolio
-1. Navigate to Portfolio Simulator
-2. Enter portfolio name and initial capital
-3. Add stocks by ticker symbol
-4. Run performance simulation
-5. Compare against S&P 500 benchmark
-
-### Stock Screening
-1. Go to Stock Browser
-2. Set filtering criteria (P/E, dividend yield, sector, market cap)
-3. Click "Screen Stocks"
-4. Review results and add to portfolio
-
-## 🔧 Configuration
-
-### Environment Variables
-Update `config.py` with your settings:
-```python
-SUPABASE_URL = "your-supabase-url"
-SUPABASE_ANON_KEY = "your-supabase-key"
-YAHOO_FINANCE_CACHE_TTL = 300  # 5 minutes
+```
+stock etf dashboard/
+├── .env                 # 🔒 Environment variables (not in git)
+├── .env.example         # 📋 Template for environment setup
+├── config.py            # ⚙️ Configuration management
+├── data_service.py      # 📊 Stock data service (Yahoo Finance)
+├── portfolio_service.py # 💼 Portfolio management & analysis
+├── requirements.txt     # 📦 Python dependencies
+├── README.md            # 📖 This file
+└── app/                 # 🆕 Modular dashboard application
+    ├── main.py          # 🚀 Main entry point with navigation
+    ├── pages/           # 📱 Individual dashboard pages
+    │   ├── dashboard.py     # Main dashboard view
+    │   ├── stock_browser.py # Stock screening
+    │   ├── portfolio.py     # Portfolio simulation
+    │   └── market_analysis.py # Market insights
+    ├── utils/           # ✨ Utilities & styling
+    │   └── styles.py        # Custom CSS
+    └── requirements.txt # 📦 App-specific dependencies
 ```
 
-### API Settings
-- **Yahoo Finance**: Primary data source (free, no API key)
-- **Alpha Vantage**: Backup source (optional, requires API key)
-- **IEX Cloud**: Alternative source (optional, requires API key)
+## 🚀 **Quick Start**
 
-## 📊 Data Sources
-
-### Stock Information
-- Current price and volume
-- P/E ratio and market cap
-- Dividend yield and sector
-- 52-week high/low
-- Technical indicators
-
-### Historical Data
-- 1-year price charts
-- Moving averages (20-day, 50-day)
-- RSI and volatility metrics
-- Daily returns and performance
-
-## 🚀 Deployment
-
-### Local Development
+### 1. **Clone & Setup**
 ```bash
-streamlit run main_dashboard.py --server.port 8501
+git clone <your-repo-url>
+cd stock-etf-dashboard
 ```
 
-### Streamlit Cloud (Recommended)
+### 2. **Environment Setup**
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Edit .env with your credentials
+nano .env
+```
+
+### 3. **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+### 4. **Run Dashboard**
+```bash
+cd app
+python3 -m streamlit run main.py --server.port 8501
+```
+
+**Access at: http://localhost:8501**
+
+## ⚙️ **Configuration**
+
+### **Required Environment Variables**
+```bash
+# Supabase (for portfolio storage)
+SUPABASE_URL=your-supabase-url
+SUPABASE_ANON_KEY=your-supabase-anon-key
+
+# Optional API Keys (for backup data sources)
+ALPHA_VANTAGE_API_KEY=your-alpha-vantage-key
+IEX_CLOUD_API_KEY=your-iex-cloud-key
+
+# Cache Settings
+YAHOO_FINANCE_CACHE_TTL=300  # 5 minutes
+MAX_CACHE_SIZE=1000
+CACHE_EXPIRY=3600  # 1 hour
+```
+
+## 📊 **Data Sources**
+
+- **Primary**: Yahoo Finance (free, no API key required)
+- **Backup**: Alpha Vantage (optional, requires API key)
+- **Alternative**: IEX Cloud (optional, requires API key)
+
+## 🔒 **Security Features**
+
+- ✅ **No hardcoded credentials** in source code
+- ✅ **Environment-based configuration**
+- ✅ **Secure credential management**
+- ✅ **Git ignores sensitive files**
+
+## 🎯 **Stock Universe (69 Stocks)**
+
+The dashboard monitors a carefully curated selection of major stocks across 7 sectors:
+
+- **Technology** (10): AAPL, MSFT, GOOGL, TSLA, NVDA, META, AMZN, NFLX, AMD, INTC
+- **Financial Services** (10): JPM, BAC, WFC, GS, MS, C, AXP, BLK, SCHW, USB
+- **Healthcare** (10): JNJ, PFE, UNH, ABBV, MRK, TMO, DHR, LLY, BMY, AMGN
+- **Consumer Goods** (10): PG, KO, PEP, WMT, HD, MCD, SBUX, NKE, DIS, CMCSA
+- **Energy** (10): XOM, CVX, COP, EOG, SLB, KMI, PSX, VLO, MPC, OXY
+- **Industrial** (10): BA, CAT, MMM, GE, HON, UPS, FDX, LMT, RTX, NOC
+- **Materials** (9): LIN, APD, FCX, NEM, DOW, DD, ECL, ALB, NUE
+
+**Why This Selection?**
+- Represents ~40% of total US market cap
+- Covers all major economic sectors
+- High liquidity and real-time data availability
+- Industry standard approach
+
+## 🛠️ **Development**
+
+### **Adding New Pages**
+1. Create new file in `app/pages/`
+2. Import in `app/main.py`
+3. Add to navigation tabs
+
+### **Adding New Components**
+1. Create in `app/components/`
+2. Import where needed
+3. Follow existing patterns
+
+### **Styling**
+- All CSS in `app/utils/styles.py`
+- Use CSS classes for consistent design
+- Follow existing color scheme (#00D4AA primary)
+
+## 📦 **Dependencies**
+
+- **Streamlit** (1.28.0+) - Web framework
+- **Pandas** (2.0.0+) - Data manipulation
+- **NumPy** (1.24.0+) - Numerical computing
+- **Plotly** (5.15.0+) - Interactive charts
+- **yfinance** (0.2.18+) - Stock data
+- **python-dotenv** (1.0.0+) - Environment variables
+- **Supabase** (2.0.0+) - Backend services
+
+## 🚀 **Deployment**
+
+### **Streamlit Cloud (Recommended)**
 1. Push code to GitHub
 2. Connect repository to [Streamlit Cloud](https://streamlit.io/cloud)
-3. Deploy automatically
+3. Set environment variables in Streamlit Cloud dashboard
+4. Deploy automatically
 
-### Other Platforms
-- **Heroku**: Add `setup.sh` and `Procfile`
-- **Railway**: Direct deployment from GitHub
-- **Render**: Web service deployment
+### **Local Development**
+```bash
+cd app
+python3 -m streamlit run main.py --server.port 8501
+```
 
-## 🔒 Security Considerations
+### **Production Server**
+```bash
+cd app
+python3 -m streamlit run main.py --server.port 8501 --server.headless true
+```
 
-- **API Keys**: Never commit credentials to version control
-- **Rate Limiting**: Built-in caching to respect API limits
-- **Data Validation**: Input sanitization and error handling
-- **Secure Storage**: Environment-based configuration
-
-## 📈 Performance Features
-
-- **Smart Caching**: 5-minute cache for stock data
-- **Rate Limit Management**: Intelligent API call queuing
-- **Fallback Systems**: Multiple data sources for reliability
-- **Optimized Calculations**: Efficient portfolio metrics computation
-
-## 🎯 Resume Highlights
-
-This project demonstrates:
-- **Full-stack Development**: Python backend + Streamlit frontend
-- **Financial Engineering**: Risk metrics, portfolio optimization
-- **API Integration**: Multiple financial data sources
-- **Data Visualization**: Professional financial charts
-- **Real-time Systems**: Live market data and updates
-- **Security Best Practices**: Secure credential management
-
-## 🤝 Contributing
+## 🤝 **Contributing**
 
 1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
 5. Create Pull Request
 
-## 📄 License
+## 📄 **License**
 
 MIT License - see LICENSE file for details
 
-## 🆘 Support
+## 🆘 **Support**
 
 - **Issues**: Create GitHub issue
 - **Documentation**: Check README and code comments
 - **Community**: Streamlit and Supabase communities
 
-## 🔮 Future Enhancements
+## 🔮 **Future Enhancements**
 
-- **Real-time Updates**: WebSocket integration for live prices
-- **Advanced Analytics**: Machine learning portfolio optimization
-- **Mobile App**: React Native companion app
-- **Social Features**: Portfolio sharing and community
-- **Backtesting**: Historical strategy performance testing
+- **Real-time updates** with WebSocket integration
+- **Advanced analytics** with machine learning
+- **Mobile app** companion
+- **Social features** for portfolio sharing
+- **Backtesting** for strategy validation
 
 ---
 
 **Built with ❤️ using Python, Streamlit, and Supabase**
+
+**Version**: 2.0.0 (Modular Structure)
+**Last Updated**: August 2024

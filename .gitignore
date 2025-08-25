@@ -32,17 +32,17 @@ MANIFEST
 venv/
 env/
 ENV/
-.venv/
-.ENV/
+env.bak/
+venv.bak/
 
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
+# OS files
 .DS_Store
 .DS_Store?
 ._*
@@ -60,7 +60,7 @@ logs/
 *.temp
 .cache/
 
-# Database
+# Database files
 *.db
 *.sqlite
 *.sqlite3
@@ -70,14 +70,8 @@ logs/
 
 # pytest
 .pytest_cache/
-
-# Coverage reports
-htmlcov/
 .coverage
-.coverage.*
-coverage.xml
-*.cover
-.hypothesis/
+htmlcov/
 
 # mypy
 .mypy_cache/
@@ -87,5 +81,14 @@ dmypy.json
 # Streamlit
 .streamlit/
 
-# Supabase
+# Supabase local development
 .supabase/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Local configuration overrides
+config.local.py
+settings.local.py
