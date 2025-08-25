@@ -1,8 +1,8 @@
-# 📈 Stock/ETF Dashboard
+# Stock/ETF Dashboard
 
-A real-time financial dashboard built with Python and Streamlit for tracking stocks, analyzing portfolios, and monitoring market performance.
+A real-time financial dashboard built with Python  for tracking stocks, analyzing portfolios, and monitoring market performance.
 
-## 🚀 Features
+## Features
 
 - **Real-time Market Data** - Live stock prices from Yahoo Finance API
 - **Portfolio Simulation** - Create and analyze investment scenarios
@@ -10,7 +10,7 @@ A real-time financial dashboard built with Python and Streamlit for tracking sto
 - **Stock Screening** - Filter stocks by P/E, dividends, market cap
 - **Interactive Charts** - Price history with technical indicators
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.9+**
 - **Streamlit** - Web framework
@@ -18,11 +18,11 @@ A real-time financial dashboard built with Python and Streamlit for tracking sto
 - **Pandas** - Data manipulation
 - **Plotly** - Interactive charts
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/EmuPanda/stock-etf-dashboard
 cd stock-etf-dashboard
 ```
 
@@ -43,22 +43,15 @@ cd app
 python3 -m streamlit run main.py --server.port 8501
 ```
 
-## 🔑 Environment Variables
 
-Create a `.env` file with:
-```
-SUPABASE_URL=your_supabase_url
-SUPABASE_ANON_KEY=your_supabase_key
-```
-
-## 📱 Usage
+## Usage
 
 - **Dashboard**: Market overview and top movers
 - **Stock Browser**: Screen stocks by criteria
 - **Portfolio**: Simulate investment strategies
 - **Market Analysis**: Sector performance insights
 
-## 🎯 Project Structure
+## Project Structure
 
 ```
 app/
@@ -68,11 +61,11 @@ app/
 └── requirements.txt     # Dependencies
 ```
 
-## 📊 Screenshots
+## Screenshots
 
 *Add screenshots of your dashboard here*
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -80,10 +73,6 @@ app/
 4. Push to the branch
 5. Open a Pull Request
 
-## 📄 License
 
-MIT License - feel free to use this project for learning and development.
 
----
 
-**Built with ❤️ using Python and Streamlit**
