@@ -35,14 +35,14 @@ ENV/
 env.bak/
 venv.bak/
 
-# IDE files
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS files
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -58,37 +58,25 @@ logs/
 # Temporary files
 *.tmp
 *.temp
-.cache/
 
-# Database files
+# Database
 *.db
 *.sqlite
 *.sqlite3
 
-# Jupyter Notebook
+# Jupyter
 .ipynb_checkpoints
 
-# pytest
+# Testing
 .pytest_cache/
 .coverage
 htmlcov/
 
-# mypy
+# MyPy
 .mypy_cache/
-.dmypy.json
-dmypy.json
 
 # Streamlit
 .streamlit/
 
-# Supabase local development
-.supabase/
-
-# Backup files
-*.bak
-*.backup
-*~
-
-# Local configuration overrides
-config.local.py
-settings.local.py
+# Supabase local
+supabase/
