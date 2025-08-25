@@ -2,14 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
-import sys
-import os
 
-# Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from data_service import StockDataService
-from app.utils.styles import get_custom_css
+from utils.styles import get_custom_css
 
 def show_market_analysis():
     """Market analysis and insights with improved design"""

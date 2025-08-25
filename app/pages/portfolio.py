@@ -3,15 +3,11 @@ import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
 from datetime import datetime
-import sys
-import os
 
-# Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from data_service import StockDataService
 from portfolio_service import PortfolioService
-from app.utils.styles import get_custom_css
+from utils.styles import get_custom_css
 
 def show_portfolio_simulator():
     """Real portfolio analysis tool with historical performance simulation"""

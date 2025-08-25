@@ -1,14 +1,10 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-import sys
-import os
 
-# Add parent directory to path for imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from data_service import StockDataService
-from app.utils.styles import get_custom_css
+from utils.styles import get_custom_css
 
 def show_stock_browser():
     """Stock browser and screening with improved design"""

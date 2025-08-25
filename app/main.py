@@ -1,8 +1,8 @@
 import streamlit as st
-from app.pages.dashboard import show_dashboard
-from app.pages.stock_browser import show_stock_browser
-from app.pages.portfolio import show_portfolio_simulator
-from app.pages.market_analysis import show_market_analysis
+from pages.dashboard import show_dashboard
+from pages.stock_browser import show_stock_browser
+from pages.portfolio import show_portfolio_simulator
+from pages.market_analysis import show_market_analysis
 
 # Page configuration
 st.set_page_config(
